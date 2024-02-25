@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Streak Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .streak {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .streak .count {
+            color: #4CAF50;
+        }
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 40px); /* 7 columns for 7 days */
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .day {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .checked {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .unchecked {
+            background-color: #fff;
+        }
+
+        .fire {
+            color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daily Streak Tracker</h1>
+    
+    <div class="streak">
+        <span class="fire">🔥</span> Your current streak is: <span class="count" id="streakCount">0</span> days
+    </div>
+    
+    <div class="days">
+        <!-- Calendar Days -->
+        <div class="day unchecked" onclick="toggleDay(this)">1</div>
+        <div class="day unchecked" onclick="toggleDay(this)">2</div>
+        <div class="day unchecked" onclick="toggleDay(this)">3</div>
+        <div class="day unchecked" onclick="toggleDay(this)">4</div>
+        <div class="day unchecked" onclick="toggleDay(this)">5</div>
+        <div class="day unchecked" onclick="toggleDay(this)">6</div>
+        <div class="day unchecked" onclick="toggleDay(this)">7</div>
+        <div class="day unchecked" onclick="toggleDay(this)">8</div>
+        <div class="day unchecked" onclick="toggleDay(this)">9</div>
+        <div class="day unchecked" onclick="toggleDay(this)">10</div>
+        <div class="day unchecked" onclick="toggleDay(this)">11</div>
+        <div class="day unchecked" onclick="toggleDay(this)">12</div>
+        <div class="day unchecked" onclick="toggleDay(this)">13</div>
+        <div class="day unchecked" onclick="toggleDay(this)">14</div>
+        <div class="day unchecked" onclick="toggleDay(this)">15</div>
+        <div class="day unchecked" onclick="toggleDay(this)">16</div>
+        <div class="day unchecked" onclick="toggleDay(this)">17</div>
+        <div class="day unchecked" onclick="toggleDay(this)">18</div>
+        <div class="day unchecked" onclick="toggleDay(this)">19</div>
+        <div class="day unchecked" onclick="toggleDay(this)">20</div>
+        <div class="day unchecked" onclick="toggleDay(this)">21</div>
+        <div class="day unchecked" onclick="toggleDay(this)">22</div>
+        <div class="day unchecked" onclick="toggleDay(this)">23</div>
+        <div class="day unchecked" onclick="toggleDay(this)">24</div>
+        <div class="day unchecked" onclick="toggleDay(this)">25</div>
+        <div class="day unchecked" onclick="toggleDay(this)">26</div>
+        <div class="day unchecked" onclick="toggleDay(this)">27</div>
+        <div class="day unchecked" onclick="toggleDay(this)">28</div>
+        <div class="day unchecked" onclick="toggleDay(this)">29</div>
+        <div class="day unchecked" onclick="toggleDay(this)">30</div>
+        <div class="day unchecked" onclick="toggleDay(this)">31</div>
+    </div>
+
+    <script>
+        var streakCount = 0;
+
+        function updateStreak() {
+            document.getElementById("streakCount").textContent = streakCount;
+        }
+
+        function toggleDay(day) {
+            if (day.classList.contains("checked")) {
+                day.classList.remove("checked");
+                day.classList.add("unchecked");
+                streakCount--;
+            } else {
+                day.classList.remove("unchecked");
+                day.classList.add("checked");
+                streakCount++;
+            }
+            updateStreak();
+        }
+    </script>
+</body>
+</html>

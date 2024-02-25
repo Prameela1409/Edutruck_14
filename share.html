@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Sharing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section {
+            width: 80%;
+            background-color: #f0f8ff; /* Light blue background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Book Sharing</h1>
+        </header>
+
+        <h2>Your Books</h2>
+        <ul>
+            <li>
+                <strong>Title:</strong> Harry Potter and the Sorcerer's Stone<br>
+                <strong>Author:</strong> J.K. Rowling<br>
+                <strong>Genre:</strong> Fantasy<br>
+                <strong>ISBN:</strong> 978-0-7475-3269-6<br>
+                <div class="btn-container">
+                    <button onclick="removeBook()">Remove Book</button>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Books from Others</h2>
+        <ul>
+            <li>
+                <strong>Title:</strong> The Great Gatsby<br>
+                <strong>Author:</strong> F. Scott Fitzgerald<br>
+                <strong>Genre:</strong> Classic<br>
+                <strong>ISBN:</strong> 978-0-7432-7356-5<br>
+                <div class="btn-container">
+                    <button onclick="requestBook()">Request Book</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        function removeBook() {
+            // Add logic to remove the book from the user's list
+            alert("Book removed!");
+        }
+
+        function requestBook() {
+            // Add logic to handle book requests
+            alert("Book requested!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        nav {
+            width: 20%;
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .chat-container {
+            width: 70%;
+            padding: 20px;
+        }
+
+        .chatbox {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            background-color: #fff;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 80px);
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+        nav a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 0 25px;
+        }
+        .naav{
+            padding:30px ;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AI Chat</h1>
+</header>
+
+<section>
+   
+    <div class="chat-container">
+        <div class="chatbox" id="chatbox">
+            <div class="message"><span>Admin:</span> Welcome to the AI chat!</div>
+        </div>
+        <input type="text" id="messageInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</section>
+
+<script>
+    function sendMessage() {
+        var messageInput = document.getElementById('messageInput');
+        var message = messageInput.value;
+        var chatbox = document.getElementById('chatbox');
+        var newMessage = document.createElement('div');
+        newMessage.classList.add('message');
+        newMessage.innerHTML = '<span>You:</span> ' + message;
+        chatbox.appendChild(newMessage);
+        messageInput.value = ''; // Clear input field after sending message
+
+        // Simulate AI response after a short delay
+        setTimeout(function() {
+            var aiResponse = getAIResponse(message); // You need to implement this function
+            var reply = document.createElement('div');
+            reply.classList.add('message');
+            reply.innerHTML = '<span>AI:</span> ' + aiResponse;
+            chatbox.appendChild(reply);
+            chatbox.scrollTop = chatbox.scrollHeight; // Scroll to bottom
+        }, 1000); // Simulate AI response after 1 second
+    }
+
+    // Simulated function to get AI response
+    function getAIResponse(message) {
+        // You can implement your AI logic here based on the user message
+        // For now, let's just return a static response
+        return "Thank you for your message! How can I assist you today?";
+    }
+</script>
+
+</body>
+</html>

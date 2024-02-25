@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Courses</title>
+    <style>
+        /* Provided CSS */
+        .explore-knowledge {
+            background-color: #eaf6ff; /* Changed background color to light blue */
+            padding: 20px;
+        }
+
+        .head {
+            font-family: Roboto;
+            font-size: 32px;
+            font-weight: 700;
+            color: #183b56;
+            margin-bottom: 30px;
+        }
+
+        .course-section {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .course {
+            flex: 1 1 calc(50% - 15px); /* Two courses side by side with margin */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .img-head {
+            font-family: Roboto;
+            font-size: 24px;
+            font-weight: 500;
+            color: #183b56;
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .course-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #183b56;
+            text-align: center;
+        }
+
+        .course-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #183b56;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0c2c43;
+        }
+
+        /* Additional Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .subject-enroll {
+            flex: 1 1 calc(50% - 15px); /* Two elements side by side with margin */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .subject-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .subject-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #183b56;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="explore-knowledge">
+        <div class="container">
+            <h1 class="head">Courses</h1>
+
+            <!-- 10th Grade Basics Section -->
+            <div class="course-section">
+                <h2 class="img-head">For 10th Grade Students</h2>
+                <div class="course">
+                    <h3 class="course-title">Introduction to Physics Concepts</h3>
+                    <p class="course-description">Learn basic Physics concepts and logic.</p>
+                    <a href="#" class="btn" onclick="openPhysicsCourse()">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3 class="course-title">Biology Fundamentals</h3>
+                    <p class="course-description">Introduction to Biology.</p>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <!-- Intermediate Basics Section -->
+            <div class="course-section">
+                <h2 class="img-head">For Intermediate Students</h2>
+                <div class="course">
+                    <h3 class="course-title">Data Structures and Algorithms</h3>
+                    <p class="course-description">Explore advanced data structures and algorithms.</p>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3 class="course-title">Object-Oriented Programming</h3>
+                    <p class="course-description">Learn the principles of object-oriented programming.</p>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <!-- For B.Tech Students Section -->
+            <div class="course-section">
+                <h2 class="img-head">For B.Tech Students</h2>
+                <div class="course">
+                    <h3 class="course-title">Software Engineering Principles</h3>
+                    <p class="course-description">Understand software development methodologies and principles.</p>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3 class="course-title">Database Management Systems</h3>
+                    <p class="course-description">Introduction to database design and management.</p>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <!-- Additional Skills Section -->
+            <div class="course-section">
+                <h2 class="img-head">Extra Skills</h2>
+                <div class="course">
+                    <h3 class="course-title">Communication Skills</h3>
+                    <p class="course-description">Improve your communication skills for better collaboration.</p>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3 class="course-title">Programming Languages</h3>
+                    <p class="course-description">Learn various programming languages like Java, Python, and more.</p>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPhysicsCourse() {
+            window.open("enroll_physics.html", "_blank");
+        }
+    </script>
+</body>
+
+</html>

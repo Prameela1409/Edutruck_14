@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Course Enrollment</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:lightblue;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .course {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .course-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .course-description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .enroll-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .enroll-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">For 10th Grade Students</h2>
+            <div class="course">
+                <h3 class="course-title">Mathematics Practice</h3>
+                <p class="course-description">Practice basic math skills and problem-solving techniques.</p>
+                <a class="enroll-btn" href="#" class="btn" onclick="openmathsp()">Enroll Now</a>
+            </div>
+            <div class="course">
+                <h3 class="course-title">Science Practice</h3>
+                <p class="course-description">Practice science concepts and experiments.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">For Intermediate Students</h2>
+            <div class="course">
+                <h3 class="course-title">Advanced Mathematics Practice</h3>
+                <p class="course-description">Practice calculus, algebra, and trigonometry.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+            <div class="course">
+                <h3 class="course-title">Physics Practice</h3>
+                <p class="course-description">Practice solving physics problems and understanding concepts.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">For B.Tech Students</h2>
+            <div class="course">
+                <h3 class="course-title">Software Engineering Practice</h3>
+                <p class="course-description">Practice coding, software design, and development.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+            <div class="course">
+                <h3 class="course-title">Database Management Practice</h3>
+                <p class="course-description">Practice designing and managing databases.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openmathsp() {
+            window.open("mathsp.html", "_blank");
+        }
+    </script>
+</body>
+
+</html>

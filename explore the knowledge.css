@@ -1,0 +1,28 @@
+.explore-knowledge{
+    background-color: white;
+}
+.head{
+    font-family: Roboto;
+    font-weight:700px;
+    font-size:28px;
+    color:#183b56;
+}
+.image{
+    border-radius: 16px;
+}
+.img-head{
+    font-family: Roboto;
+    font-size:20px;
+    margin-top:24px;
+    font-weight:500px;
+    color:#323f4b;
+}
+.menu-link{
+    color:#183b56;
+    font-family:Roboto;
+    font-size:14px;
+    font-weight:500px;
+}
+.menu-item-card{
+    border-radius:16px;
+}
